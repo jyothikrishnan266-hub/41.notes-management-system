@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>📝 My Notes</h1>
+  <p>Organize your thoughts in one place</p>
+</header>
+
+<main>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search your notes...">
+    <button id="newNoteBtn">+ New Note</button>
+  </div>
+
+  <section id="editor" class="editor hidden">
+    <h2 id="editorHeading">Create Note</h2>
+
+    <form id="noteForm">
+      <label for="title">Note Title</label>
+      <input id="title" type="text" maxlength="120"
+        placeholder="Enter note title" required>
+
+      <label for="category">Category</label>
+      <select id="category">
+        <option>Personal</option>
+        <option>Work</option>
+        <option>Study</option>
+        <option>Ideas</option>
+        <option>Other</option>
+      </select>
+
+      <label for="content">Note Content</label>
+      <textarea id="content" rows="7"
+        placeholder="Write your note here..." required></textarea>
+
+      <label for="noteColor">Note Color</label>
+      <select id="noteColor">
+        <option value="yellow">Yellow</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="pink">Pink</option>
+        <option value="purple">Purple</option>
+      </select>
+
+      <div class="form-actions">
+        <button type="submit">Save Note</button>
+        <button type="button" id="cancelBtn" class="secondary">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <section>
+    <div class="section-heading">
+      <h2>All Notes</h2>
+      <span id="noteCount">0 notes</span>
+    </div>
+
+    <div id="notesList" class="notes-grid"></div>
+  </section>
+</main>
+
+<footer>Notes Management System © 2026</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
